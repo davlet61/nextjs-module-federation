@@ -16,9 +16,7 @@ module.exports = {
             skeleton: 'skeleton@http://localhost:3001/_next/static/chunks/remoteEntry.js',
           },
           exposes: {
-            './nav': './components/nav.js',
-            './home': './realPages/index.js',
-            './pages-map': './pages-map.js',
+            './nav': './components/Navbar.tsx',
           },
           shared: {},
         }),

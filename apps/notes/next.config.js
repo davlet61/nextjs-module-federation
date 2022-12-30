@@ -16,10 +16,7 @@ module.exports = {
             skeleton: 'skeleton@http://localhost:3001/_next/static/chunks/remoteEntry.js',
           },
           exposes: {
-            './shop': './pages/shop',
-            './pdp': './pages/p/[...slug].js',
-            './pages-map': './pages-map.js',
-            './customHook': './components/someHook.js',
+            './shop': './pages/index',
           },
           shared: {},
         }),
