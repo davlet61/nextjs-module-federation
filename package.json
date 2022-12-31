@@ -8,7 +8,10 @@
   ],
   "scripts": {
     "build": "turbo run build",
+    "build:lib": "turbo run build --filter=lib",
+    "build:ui": "turbo run build --filter=ui",
     "dev": "turbo run dev --parallel",
+    "dev:skeleton": "turbo run dev --filter=skeleton",
     "start": "turbo run start --parallel",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",

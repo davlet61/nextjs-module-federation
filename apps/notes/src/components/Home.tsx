@@ -1,4 +1,4 @@
-import { Button, Link, Container } from 'ui';
+import { Button, Container, Link } from 'ui';
 
 export const Home = () => (
   <Container>

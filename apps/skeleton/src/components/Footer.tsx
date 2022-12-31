@@ -18,7 +18,7 @@ const Footer = () => {
           </li>
           <li>
             <ButtonOrLink href="#" className="mr-4 hover:underline md:mr-6 ">
-              Licensing
+              Terms & Conditions
             </ButtonOrLink>
           </li>
           <li>
@@ -34,7 +34,7 @@ const Footer = () => {
         <ButtonOrLink href="https://flowbite.com/" className="hover:underline">
           DY™
         </ButtonOrLink>
-        . All Rights Reserved.
+        | All Rights Reserved.
       </span>
     </footer>
   );

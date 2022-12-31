@@ -1,5 +1,5 @@
-import { flushChunks,FlushedChunks, revalidate } from '@module-federation/nextjs-mf/utils';
-import Document, { DocumentContext,Head, Html, Main, NextScript } from 'next/document';
+import { flushChunks, FlushedChunks, revalidate } from '@module-federation/nextjs-mf/utils';
+import Document, { DocumentContext, Head, Html, Main, NextScript } from 'next/document';
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
@@ -30,7 +30,7 @@ class MyDocument extends Document {
       <Html>
         <Head>
           <meta name="robots" content="noindex" />
-          {/* @ts-ignore */}
+          {/* @ts-expect-error: Unreachable code error */}
           <FlushedChunks chunks={this.props.chunks} />
         </Head>
 

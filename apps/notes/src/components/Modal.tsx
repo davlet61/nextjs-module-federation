@@ -1,12 +1,12 @@
-import { useSelected, useVisibility } from 'lib/hooks/stores';
-import { Form, Input, Select, Submit, Button, Modal as Popup, useZodForm } from 'ui';
+import { useSelected, useVisibility } from 'lib';
+import { Button, Form, Input, Modal as Popup, Select, Submit, useZodForm } from 'ui';
 import { z } from 'zod';
 
 const newNoteSchema = z.object({
   text: z.string().min(1),
 });
 
-export const Modal = () => {
+const Modal = () => {
   const form = useZodForm({ schema: newNoteSchema });
   const { visibility, toggleVisibility } = useVisibility((state) => state);
   const { selectedOpt, setSelected } = useSelected((state) => state);
@@ -33,3 +33,5 @@ export const Modal = () => {
     </div>
   );
 };
+
+export default Modal;
