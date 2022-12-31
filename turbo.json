@@ -1,5 +1,6 @@
 {
   "$schema": "https://turbo.build/schema.json",
+  "globalDependencies": ["$NODE_ENV"],
   "pipeline": {
     "build": {
       "dependsOn": ["^build"],
@@ -9,6 +10,10 @@
       "outputs": []
     },
     "dev": {
+      "cache": false
+    },
+    "start": {},
+    "dev:standalone": {
       "cache": false
     }
   }

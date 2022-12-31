@@ -3,15 +3,13 @@ module.exports = {
   root: true,
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    ecmaFeatures: {
-      jsx: true,
-    },
+    tsconfigRootDir: __dirname,
+    project: ['./tsconfig.json'],
+    project: ['./apps/*/tsconfig.json', './packages/*/tsconfig.json'],
   },
   settings: {
-    react: {
-      version: 'detect',
+    next: {
+      rootDir: ['apps/*/', 'packages/*/'],
     },
     'import/resolver': {
       node: {
