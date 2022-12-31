@@ -1,4 +1,4 @@
-import '../globals.css';
+import 'styles/globals.css';
 
 import App, { type AppContext, type AppType } from 'next/app';
 
