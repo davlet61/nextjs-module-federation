@@ -1,20 +1,15 @@
-import { useCount, useVisibility } from 'lib';
-import dynamic from 'next/dynamic';
+import { Navbar, NewNoteModal } from 'components';
 import { Suspense } from 'react';
 
-import { Navbar } from '../components';
-
-const Modal = dynamic(() => import('notes/Modal'), { ssr: process.env.NODE_ENV !== 'development' });
-
-export default function Index() {
-  const { visibility } = useVisibility();
-  console.log(visibility);
+const HomePage = () => {
   return (
     <>
       <Navbar />
       <Suspense fallback="Loading..">
-        <Modal />
+        <NewNoteModal />
       </Suspense>
     </>
   );
-}
+};
+
+export default HomePage;

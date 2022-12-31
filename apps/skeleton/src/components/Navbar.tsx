@@ -1,11 +1,10 @@
 import 'tailwindcss/tailwind.css';
 
-import { useCount, useVisibility } from 'lib';
+import { useVisibility } from 'lib';
 import { Button, ButtonOrLink, Logo } from 'ui';
 
 const Navbar = () => {
   const { toggleVisibility } = useVisibility((state) => state);
-  const { count, clear } = useCount();
   return (
     <nav className="rounded border-gray-200 bg-white px-2 py-2.5 dark:bg-gray-900 sm:px-4">
       <div className="container mx-auto flex flex-wrap items-center justify-between">
@@ -41,7 +40,7 @@ const Navbar = () => {
                 href="#"
                 className="md:hover:text-brand-700 block rounded py-2 pl-3 pr-4 text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:border-0 md:p-0 md:hover:bg-transparent md:dark:hover:bg-transparent md:dark:hover:text-white"
               >
-                {count}
+                About
               </ButtonOrLink>
             </li>
             <li>
@@ -63,11 +62,6 @@ const Navbar = () => {
             <li>
               <Button onClick={toggleVisibility}>New Note</Button>
             </li>
-            <li>
-              <Button intent="secondary" onClick={clear}>
-                Clear
-              </Button>
-            </li>
           </ul>
         </div>
       </div>
@@ -76,6 +70,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-function useStore(): { count: any; clear: any } {
-  throw new Error('Function not implemented.');
-}

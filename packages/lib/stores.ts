@@ -39,14 +39,14 @@ export const useSelected = create<SelectedStore>((set) => ({
   setSelected: (opt) => set(() => ({ selectedOpt: opt })),
 }));
 
-export interface CountStore {
-  count: number;
-  increment: () => void;
-  clear: () => void;
+// extra
+
+export interface Show {
+  show: boolean;
+  toggleShow: () => void;
 }
 
-export const useCount = create<CountStore>((set) => ({
-  count: 0,
-  increment: () => set((state) => ({ count: state.count + 1 })),
-  clear: () => set(() => ({ count: 0 })),
+export const useShow = create<Show>((set) => ({
+  show: false,
+  toggleShow: () => set((state) => ({ show: !state.show })),
 }));

@@ -17,6 +17,7 @@ const config = {
         },
         exposes: {
           './Navbar': './src/components/Navbar.tsx',
+          './Footer': './src/components/Footer.tsx',
         },
         extraOptions: {
           automaticAsyncBoundary: true,
